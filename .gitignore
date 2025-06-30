@@ -29,4 +29,5 @@ Thumbs.db
 /dist
 /build
 
-
+# Other files to ignore
+start-app.sh
