@@ -15,6 +15,11 @@ mongoose.connect('mongodb://mongo:27017/musicstore', {
     .then(() => console.log('✅ MongoDB connected'))
     .catch(err => console.error(err));
 
+app.use('/api/tracks', require('./routes/tracks'));
+app.use('/api/albums', require('./routes/albums'));
+app.use('/api/samplePacks', require('./routes/samplePacks'));
+app.use('/api/sounds', require('./routes/sounds'));
+
 app.get('/', (req, res) => {
     res.send('API is working!');
 });
